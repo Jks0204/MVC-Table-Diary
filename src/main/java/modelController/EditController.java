@@ -47,7 +47,7 @@ public class EditController extends HttpServlet {
 		
 		int no=Integer.parseInt(mr.getParameter("no"));
 		String prevOfile=mr.getParameter("prevOfile");
-		String prevSfile=mr.getParameter("prevsfile");
+		String prevSfile=mr.getParameter("prevSfile");
 		
 		HttpSession session=request.getSession();
 		String pass=(String)session.getAttribute("pass");

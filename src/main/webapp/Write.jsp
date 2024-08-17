@@ -10,6 +10,10 @@
 <title>오늘의 일기</title>
 <style>
 	td:first-child {text-align:center }
+	
+	a{text-decoration: none;}
+	a:hover {font-weight:900;}
+
 </style>
 <script>
 	function validateForm(form){
@@ -65,7 +69,7 @@
 		</div>
 	</nav>
 	<div class="container">
-		<h2 class="mt-5">오늘의 일기</h2>
+		<h2 class="mt-5"><a href="/Diary/list.do">오늘의 일기</a></h2>
 		<form name="writeD" method="post" action="/Diary/write.do" enctype="multipart/form-data" onsubmit="return validateForm(this);" >
 			<table class="table table-bordered mt-3" width="95%">
 				<tr>

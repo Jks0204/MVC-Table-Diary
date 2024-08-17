@@ -106,6 +106,7 @@ public class DiaryDAO extends DBConnPool {
 		} catch (Exception e){
 			e.printStackTrace();
 		}
+
 	}
 
 	//visitcount

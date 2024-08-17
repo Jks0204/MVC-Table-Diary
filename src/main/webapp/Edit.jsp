@@ -29,6 +29,10 @@
         }     
 	}
 </script>
+<style>
+	a{text-decoration: none;}
+	a:hover {font-weight:900;}
+</style>
 </head>
 <body>
 	<nav class="navbar navbar-expand-sm bg-secondary fixed-top px-5">
@@ -62,7 +66,7 @@
 		</div>
 	</nav>
 	<div class="container">
-		<h2 class="mt-5">내용수정</h2>
+		<h2 class="mt-5"><a href="/Diary/list.do">내용수정</a></h2>
 		<form name="writeFrm" method="post" action="/Diary/edit.do" enctype="multipart/form-data" onsubmit="return validateForm(this);">
 			<input type="hidden" name="no" value="${dto.no }"/>
 			<input type="hidden" name="prevOfile" value="${dto.ofile }"/>

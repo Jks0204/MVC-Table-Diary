@@ -26,18 +26,15 @@ public class DownloadController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String ofile=request.getParameter("ofile");
 		String sfile=request.getParameter("sfile");
-
-		FileUtil.download(request, response, "/upload", sfile, ofile);
-		
 		String no=request.getParameter("no");
-		
+
 		DiaryDAO dao=new DiaryDAO();
 		dao.downCountPlus(no);
 		DiaryDTO dto=dao.selectview(no);
+		int downCount=dto.getDowncount();
 		dao.close();
+		FileUtil.download(request, response, "/upload", sfile, ofile);
 		
-		request.setAttribute("dto", dto);
-		request.getRequestDispatcher("/View.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

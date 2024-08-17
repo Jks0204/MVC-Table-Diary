@@ -14,6 +14,7 @@
 	b{color:red;}
 	tr{text-align: center;}
 	a:hover {color:red; font-weight:900;}
+	h2 a:hover {color:#0D6EFD;}
 	#list a:hover{color:violet;}
 </style>
 </head>
@@ -53,7 +54,7 @@
 		</div>
 	</nav>
 	<div class="container">
-		<h2 class="mt-5">한줄 일기</h2>
+		<h2 class="mt-5"><a href="/Diary/list.do">한줄 일기</a></h2>
 		
 		<form method="get">
 			<table width="100%">

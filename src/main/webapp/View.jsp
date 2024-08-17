@@ -9,6 +9,10 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <title>일기장</title>
+<style>
+	a{text-decoration: none;}
+	a:hover {font-weight:900;}
+</style>
 </head>
 <body>
 	<nav class="navbar navbar-expand-sm bg-secondary fixed-top px-5">
@@ -49,19 +53,27 @@
 							count:noCount,
 							ckno:${dto.no}
 						}
-					})
+					});
+					
 				});
 				
 				// downcount
 				function dCount(){
-					$('#dCount').load(location.href+" #dDiv");
+					$.ajax({
+						url:"/Diary/download.do",
+						type:"get",
+						success:function(){
+							$('#dCount').load(location.href+" #dDiv");
+						}
+						
+					});
 				}
 
 			</script>
 		</div>
 	</nav>
 	<div class="container">
-		<h2 class="mt-5">그날의 일기</h2>
+		<h2 class="mt-5"><a href="/Diary/list.do">그날의 일기</a></h2>
 		<table class="table table-striped table-bordered mt-3" width="95%">
 			<colgroup>
 				<col width="20%"/><col width="30%"/>
